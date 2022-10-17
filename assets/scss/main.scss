@@ -66,7 +66,7 @@ $paddingSidesModile: 14px;
 
     &::after {
         content: "";
-        background: url(../image/search.svg);
+        background: url(../image/UI/searchButton/search.svg);
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
@@ -100,6 +100,10 @@ $paddingSidesModile: 14px;
 
     border: 1px solid var(--Color__HR);
 
+    @media (max-width: 850px) {
+        max-width: 100%;
+    }
+
     &Wrapper {
         @include displayFlex(center, flex-start, column);
         gap: 19px;
@@ -117,8 +121,14 @@ $paddingSidesModile: 14px;
     width: 100%;
     height: 100%;
 
-    &Wrapper{
-        @include displayFlex(center, center, column);
+    &Wrapper {
+        @include displayFlex(center, flex-start, column);
+
+        height: 100%;
+    }
+
+    @media (max-width: 850px) {
+        display: none;
     }
 }
 
@@ -129,6 +139,21 @@ $paddingSidesModile: 14px;
         @include displayFlex(flex-start, center, column, flow-root);
 
         overflow: overlay;
+
+        &::-webkit-scrollbar {
+            width: 10px;
+            background-color: #f9f9fd;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+            background-color: var(--Color__ScrollBarThumb);
+        }
+
+        &::-webkit-scrollbar-track {
+            border-radius: 10px;
+            background-color: #f9f9fd;
+        }
     }
 
     &Item {
@@ -262,17 +287,234 @@ $paddingSidesModile: 14px;
     }
 }
 
-.titleMainGroupSelected{
+.titleMainGroupSelected {
     @include displayFlex(center, flex-start);
     gap: 12px;
 
-    &--img{
+    padding: 9px 20px;
+
+    width: 100%;
+
+    border-bottom: 1px solid var(--Color__HR);
+
+    &--Img {
         max-width: 42px;
         max-height: 42px;
 
         width: 100%;
-        height: 100%;   
+        height: 100%;
 
+        border-radius: 50%;
     }
-    
+
+    &--Title {
+        @include font(
+            var(--SizeText__SelectedTitleNameGroup),
+            600,
+            "Gilroy",
+            var(--LineHeight__SelectedTitleNameGroup)
+        );
+
+        max-width: 600px;
+
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+.chat {
+    width: 100%;
+    height: 100%;
+
+    padding: 0 20px 25px;
+
+    @include displayFlex(flex-start, flex-start, column);
+    gap: 18px;
+
+    overflow: overlay;
+
+    &::-webkit-scrollbar {
+        width: 10px;
+        background-color: #f9f9fd;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background-color: var(--Color__ScrollBarThumb);
+    }
+
+    &::-webkit-scrollbar-track {
+        border-radius: 10px;
+        background-color: #f9f9fd;
+    }
+
+    .departureDate {
+        @include displayFlex(center, center);
+        gap: 24px;
+
+        width: 100%;
+
+        margin-top: 7px;
+
+        &--Hr {
+            width: 100%;
+
+            border: 1px solid var(--Color__HR);
+            background: var(--Color__HR);
+        }
+
+        &--Time {
+            @include font(
+                var(--SizeText__TimeContent),
+                400,
+                "Gilroy",
+                var(--LineHeight__DepartureDateTime)
+            );
+
+            color: var(--Color__DisabledText);
+        }
+    }
+
+    .userMessage {
+        @include displayFlex(flex-start, flex-start);
+        gap: 10px;
+
+        max-width: 85%;
+        width: auto;
+
+        &--Avatar {
+            max-width: 24px;
+            max-height: 24px;
+
+            width: 100%;
+            height: 100%;
+
+            & img {
+                max-width: 24px;
+                max-height: 24px;
+
+                width: 100%;
+                height: 100%;
+
+                border-radius: 50%;
+            }
+        }
+
+        &--Content {
+            &Block {
+                @include displayFlex(flex-start, flex-start, column);
+                gap: 4px;
+
+                width: 100%;
+
+                padding: 12px 18px 6px;
+                border-radius: 0px 16px 16px 16px;
+
+                background: var(--Color__BGContentMessage);
+            }
+
+            &Message {
+                @include font(
+                    var(--SizeText__MainText),
+                    400,
+                    "Gilroy",
+                    var(--LineHeight__MainText)
+                );
+                color: var(--Color__TitleNameGroup);
+            }
+        }
+
+        &--Time {
+            @include font(
+                var(--SizeText__TimeContent),
+                300,
+                "Gilroy",
+                var(--LineHeight__TimeContent)
+            );
+
+            color: var(--Color__DisabledText);
+        }
+    }
+
+    .yourMessage {
+        max-width: 85%;
+        width: auto;
+
+        align-self: flex-end;
+
+        &--Content {
+            &Block {
+                @include displayFlex(flex-end, flex-end, column);
+                gap: 4px;
+
+                padding: 12px 18px 6px;
+                border-radius: 16px 16px 0px 16px;
+
+                background: var(--Color__BGContentMessage);
+            }
+
+            &Message {
+                @include font(
+                    var(--SizeText__MainText),
+                    400,
+                    "Gilroy",
+                    var(--LineHeight__MainText)
+                );
+                color: var(--Color__TitleNameGroup);
+
+                text-align: right;
+            }
+        }
+
+        &--Time {
+            @include font(
+                var(--SizeText__TimeContent),
+                300,
+                "Gilroy",
+                var(--LineHeight__TimeContent)
+            );
+
+            color: var(--Color__DisabledText);
+        }
+    }
+}
+
+.enterMessage {
+    &Wrapper {
+        @include displayFlex(center, space-between);
+        gap: 12px;
+
+        border-top: 1px solid var(--Color__HR);
+        box-shadow: 0px -1px 0px #eeeeee;
+
+        width: 100%;
+
+        padding: 0 6px;
+        padding-right: 11px;
+    }
+
+    &--Input {
+        border: none;
+        width: 100%;
+        height: 100%;
+
+        padding: 12px 6px;
+
+        @include font(
+            var(--SizeText__MainText),
+            400,
+            "Gilroy",
+            var(--LineHeight__MainText)
+        );
+
+        &::placeholder {
+            @include font(
+                var(--SizeText__MainText),
+                400,
+                "Gilroy",
+                var(--LineHeight__MainText)
+            );
+        }
+    }
 }

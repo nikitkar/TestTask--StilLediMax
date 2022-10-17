@@ -113,81 +113,45 @@
                     <h3 class="titleMainGroupSelected--Title">Group 2</h3>
                 </div>
 
-                <div class="chat">
-                    <div class="chatWrapper">
-                        <div class="departureDate">
-                            <hr class="departureDate--Hr" />
-                            <time class="departureDate--Time">31/10/2022</time>
-                            <hr class="departureDate--Hr" />
+                <div class="chat" id="chat">
+                    <div class="departureDate">
+                        <hr class="departureDate--Hr" />
+                        <time class="departureDate--Time">31/10/2022</time>
+                        <hr class="departureDate--Hr" />
+                    </div>
+
+                    <div class="userMessage">
+                        <div class="userMessage--Avatar">
+                            <img
+                                src="./assets/image/userAvatar/userAvatar.webp"
+                                alt="avatar user"
+                            />
                         </div>
 
-                        <div class="userMessage">
-                            <div class="userMessage--Avatar">
-                                <img
-                                    src="./assets/image/userAvatar/userAvatar.webp"
-                                    alt="avatar user"
-                                />
-                            </div>
-
-                            <div class="userMessage--ContentBlock">
-                                <p class="userMessage--MessageContent">
-                                    Привет! Ты видела мой рюкзак где-нибудь в
-                                    офисе?
-                                </p>
-                                <time class="userMessage--time">11:42</time>
-                            </div>
+                        <div class="userMessage--ContentBlock">
+                            <p class="userMessage--ContentMessage">
+                                Привет! Ты видела мой рюкзак где-нибудь в офисе?
+                            </p>
+                            <time class="userMessage--Time">11:42</time>
                         </div>
+                    </div>
 
-                        <div class="yourMessage">
-                            <div class="yourMessage--ContentBlock">
-                                <p class="yourMessage--MessageContent">
-                                    Привет! Ты видела мой рюкзак где-нибудь в
-                                    офисе?
-                                </p>
-                                <time class="yourMessage--time">11:42</time>
-                            </div>
-                        </div>
-
-                        <div class="departureDate">
-                            <hr class="departureDate--Hr" />
-                            <time class="departureDate--Time">Сегодня</time>
-                            <hr class="departureDate--Hr" />
-                        </div>
-
-                        <div class="userMessage">
-                            <div class="userMessage--Avatar">
-                                <img
-                                    src="./assets/image/userAvatar/userAvatar.webp"
-                                    alt="avatar user"
-                                />
-                            </div>
-
-                            <div class="userMessage--ContentBlock">
-                                <p class="userMessage--MessageContent">
-                                    Привет! Ты видела мой рюкзак где-нибудь в
-                                    офисе?
-                                </p>
-                                <time class="userMessage--time">11:42</time>
-                            </div>
-                        </div>
-
-                        <div class="yourMessage">
-                            <div class="yourMessage--ContentBlock">
-                                <p class="yourMessage--MessageContent">
-                                    Привет! Ты видела мой рюкзак где-нибудь в
-                                    офисе?
-                                </p>
-                                <time class="yourMessage--time">11:42</time>
-                            </div>
+                    <div class="yourMessage">
+                        <div class="yourMessage--ContentBlock">
+                            <p class="yourMessage--ContentMessage">
+                                Привет! Ты видела мой рюкзак где-нибудь в офисе?
+                            </p>
+                            <time class="yourMessage--Time">11:42</time>
                         </div>
                     </div>
                 </div>
 
-                <div class="enterMessageWrapper">
-                    <input
+                <div class="enterMessageWrapper" id="enterMessageWrapper">
+                    <textarea
                         class="enterMessage--Input"
+                        id="enterMessage--Input"
                         placeholder="Введите свое сообщение здесь.."
-                    />
+                    ></textarea>
                     <button class="enterMessage--sendButton">
                         <svg
                             width="24"

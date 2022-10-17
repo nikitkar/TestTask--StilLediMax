@@ -389,14 +389,14 @@ body {
     --Color__BDMainBlock: #fafafa;
     --Color__BGSelectedGroup: #eeeeee;
     --Color__BGSearch: #eeeeee;
-    --Color__BGContentMessage: #F4F4F7;
+    --Color__BGContentMessage: #f4f4f7;
     --Color__ContentMessage: #000000;
-    --Color__OnlineUserCircle: #4CAF7F;
-    --Color__GoBackButton: #39B4DB;
-    --Color__BGWhite: #FFFFFF;
-    --Color__White: #FFFFFF;
+    --Color__OnlineUserCircle: #4caf7f;
+    --Color__GoBackButton: #39b4db;
+    --Color__BGWhite: #ffffff;
+    --Color__White: #ffffff;
     --Color__HR: #eeeeee;
-
+    --Color__ScrollBarThumb: #D9D9D9;
 
     /* Text Styles */
     --SizeText__SelectedTitleNameGroup: 16px;
@@ -404,10 +404,10 @@ body {
     --SizeText__ContentMessage: 12px;
     --SizeText__Search: 14px;
     --SizeText__TimeContent: 12px;
+    --SizeText__DepartureDateTime: 12px;
     --SizeText__MainText: 14px;
 
     --SizeText__SelectedTitleNameGroupModile: 18px;
-
 
     /* line-height Styles */
     --LineHeight__SelectedTitleNameGroup: 22px;
@@ -415,6 +415,7 @@ body {
     --LineHeight__ContentMessage: 20px;
     --LineHeight__Search: 18px;
     --LineHeight__TimeContent: 16px;
+    --LineHeight__DepartureDateTime: 14px;
     --LineHeight__MainText: 16px;
 
     --LineHeight__TitleNameGroupModile: 18px;
