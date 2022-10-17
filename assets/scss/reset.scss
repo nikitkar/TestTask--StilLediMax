@@ -2,28 +2,28 @@
 
 @font-face {
     font-family: "Gilroy";
-    src: url("Gilroy-Light.ttf") format("truetype");
+    src: url("../fonts/Gilroy/Gilroy-Light.ttf") format("truetype");
     font-weight: 300;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Gilroy";
-    src: url("Gilroy-Medium.ttf") format("truetype");
+    src: url("../fonts/Gilroy/Gilroy-Medium.ttf") format("truetype");
     font-weight: 500;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Gilroy";
-    src: url("Gilroy-Regular.ttf") format("truetype");
+    src: url("../fonts/Gilroy/Gilroy-Regular.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Gilroy";
-    src: url("Gilroy-SemiBold.ttf") format("truetype");
+    src: url("../fonts/Gilroy/Gilroy-SemiBold.ttf") format("truetype");
     font-weight: 600;
     font-style: normal;
 }
@@ -387,19 +387,22 @@ body {
     --Color__DisabledText: rgba(0, 0, 0, 0.45);
     --Color__ActiveText: #676767;
     --Color__BDMainBlock: #fafafa;
-    --Color__BGSelectedCorrespondence: #eeeeee;
+    --Color__BGSelectedGroup: #eeeeee;
     --Color__BGSearch: #eeeeee;
     --Color__BGContentMessage: #F4F4F7;
     --Color__ContentMessage: #000000;
     --Color__OnlineUserCircle: #4CAF7F;
     --Color__GoBackButton: #39B4DB;
+    --Color__BGWhite: #FFFFFF;
+    --Color__White: #FFFFFF;
+    --Color__HR: #eeeeee;
 
 
     /* Text Styles */
     --SizeText__SelectedTitleNameGroup: 16px;
     --SizeText__TitleNameGroup: 14px;
-    --SizeText__Search: 14px;
     --SizeText__ContentMessage: 12px;
+    --SizeText__Search: 14px;
     --SizeText__TimeContent: 12px;
     --SizeText__MainText: 14px;
 
@@ -408,9 +411,9 @@ body {
 
     /* line-height Styles */
     --LineHeight__SelectedTitleNameGroup: 22px;
-    --LineHeight__TitleNameGroup: 14px;
-    --LineHeight__Search: 18px;
+    --LineHeight__TitleNameGroup: 18px;
     --LineHeight__ContentMessage: 20px;
+    --LineHeight__Search: 18px;
     --LineHeight__TimeContent: 16px;
     --LineHeight__MainText: 16px;
 

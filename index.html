@@ -6,10 +6,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>TestTask--Chat</title>
 
-        <link rel="stylesheet" href="./assets/style/reset.css">
-        <link rel="stylesheet" href="./assets/style/main.css">
+        <link rel="stylesheet" href="./assets/style/reset.css" />
+        <link rel="stylesheet" href="./assets/style/main.css" />
     </head>
-    <body>
+    <body class="body">
         <aside class="aside">
             <div class="asideWrapper">
                 <a href="/" class="logo">
@@ -44,35 +44,67 @@
                 </a>
 
                 <div class="search">
-                    <input type="search" placeholder="Поиск" maxlength="150" />
+                    <input
+                        class="searchInput"
+                        type="search"
+                        placeholder="Поиск"
+                        maxlength="80"
+                    />
                 </div>
 
                 <ul class="personalMessageList">
                     <li class="personalMessageItem">
-                        <div class="personalMessageItem--Avatar">
-                            <img
-                                src="./assets/image/groupAvatar.webp"
-                                alt="Avatar group"
-                            />
-                        </div>
+                        <div class="personalMessageItem--Content">
+                            <div class="personalMessageItem--Avatar">
+                                <img
+                                    src="./assets/image/groupAvatar.webp"
+                                    alt="Avatar group"
+                                />
+                            </div>
 
-                        <div class="personalMessageItem--Title">
-                            <h3 class="personalMessageItem--TitleName">
-                                Group 1
-                            </h3>
-                            <h5 class="personalMessageItem--TitleContent">
-                                Когда сможешь взять задачу?
-                            </h5>
+                            <div class="personalMessageItem--Title">
+                                <h3 class="personalMessageItem--TitleName">
+                                    Group 1
+                                </h3>
+                                <h5 class="personalMessageItem--TitleContent">
+                                    Когда сможешь взять задачу?
+                                </h5>
+                            </div>
                         </div>
 
                         <div class="personalMessageItem--Time">
                             <time>16:45</time>
                         </div>
                     </li>
+                    <li class="personalMessageItem personalMessageItem--Active">
+                        <div class="personalMessageItem--Content">
+                            <div class="personalMessageItem--Avatar">
+                                <img
+                                    src="./assets/image/groupAvatar.webp"
+                                    alt="Avatar group"
+                                />
+                            </div>
+
+                            <div class="personalMessageItem--Title">
+                                <h3 class="personalMessageItem--TitleName">
+                                    Group 2
+                                </h3>
+                                <h5 class="personalMessageItem--TitleContent">
+                                    Когда сможешь взять задачу?
+                                </h5>
+                            </div>
+                        </div>
+
+                        <div class="personalMessageItem--Time">
+                            <time>18:14</time>
+                        </div>
+                    </li>
                 </ul>
             </div>
         </aside>
-        <main class="main"></main>
+        <main class="main">
+            
+        </main>
 
         <script src="./assets/scripts/js/main.js"></script>
     </body>

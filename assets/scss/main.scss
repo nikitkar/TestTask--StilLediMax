@@ -1,0 +1,236 @@
+@import "mixin.scss";
+
+$paddingSides: 23px;
+$paddingSidesModile: 14px;
+
+.logo {
+    width: 100%;
+
+    cursor: pointer;
+
+    padding: 0 $paddingSides;
+
+    @media (max-width: 650px) {
+        padding: 0 $paddingSidesModile;
+    }
+
+    & svg {
+        max-width: 90px;
+        max-height: 21px;
+
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.search {
+    width: 100%;
+
+    padding: 0 $paddingSides;
+
+    position: relative;
+
+    @media (max-width: 650px) {
+        padding: 0 $paddingSidesModile;
+    }
+
+    &Input {
+        border-radius: 12px;
+        padding: 10px 28px 10px 38px;
+
+        background: var(--Color__BGSearch);
+
+        border: none;
+
+        width: 77%;
+
+        @include font(
+            var(--SizeText__Search),
+            500,
+            "Gilroy",
+            var(--LineHeight__Search)
+        );
+        color: var(--Color__ActiveText);
+
+        &::placeholder {
+            @include font(
+                var(--SizeText__Search),
+                500,
+                "Gilroy",
+                var(--LineHeight__Search)
+            );
+
+            color: var(--Color__DisabledText);
+        }
+    }
+
+    &::after {
+        content: "";
+        background: url(../image/search.svg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        width: 13px;
+        height: 13px;
+
+        position: absolute;
+        top: 50%;
+        left: 36px;
+
+        transform: translateY(-50%);
+    }
+}
+
+.body {
+    @include displayFlex(flex-start, flex-start);
+
+    height: 100vh;
+    width: 100%;
+
+    background: var(--Color__BGWhite);
+
+    transition: all linear 0.2s;
+}
+
+.aside {
+    max-width: 337px;
+    width: 100%;
+    height: 100%;
+
+    border: 1px solid var(--Color__HR);
+
+    &Wrapper {
+        @include displayFlex(center, flex-start, column);
+        gap: 19px;
+
+        padding: 20px 0;
+        height: 100%;
+
+        @media (max-width: 600px) {
+            gap: 15px;
+        }
+    }
+}
+
+.main {
+    width: 100%;
+    height: 100%;
+}
+
+.personalMessage {
+    &List {
+        width: 100%;
+
+        @include displayFlex(flex-start, center, column);
+    }
+
+    &Item {
+        padding: 7px 23px;
+
+        width: 100%;
+
+        cursor: pointer;
+
+        @include displayFlex(flex-start, space-between);
+        gap: 35px;
+
+        transition: all linear 0.2s;
+
+        &--Active {
+            background: var(--Color__BGSelectedGroup) !important;
+
+            & .personalMessageItem--TitleContent {
+                color: var(--Color__ActiveText);
+            }
+        }
+
+        &--Content {
+            @include displayFlex(flex-start, space-between);
+            gap: 10px;
+
+            width: 100%;
+        }
+
+        &--Avatar {
+            max-width: 36px;
+            max-height: 36px;
+
+            width: 100%;
+            height: 100%;
+
+            & img {
+                max-width: 36px;
+                max-height: 36px;
+
+                width: 100%;
+                height: 100%;
+
+                border-radius: 50%;
+            }
+        }
+
+        &--Title {
+            @include displayFlex(flex-start, space-between, column);
+
+            width: 100%;
+
+            &Name {
+                @include font(
+                    var(--SizeText__TitleNameGroup),
+                    600,
+                    "Gilroy",
+                    var(--LineHeight__TitleNameGroup)
+                );
+
+                color: var(--Color__TitleNameGroup);
+
+                max-width: 170px;
+
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            &Content {
+                @include font(
+                    var(--SizeText__ContentMessage),
+                    600,
+                    "Gilroy",
+                    var(--LineHeight__ContentMessage)
+                );
+
+                color: var(--Color__DisabledText);
+
+                max-width: 170px;
+
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+
+        &--Time {
+            @include displayFlex(center, flex-end);
+
+            max-width: 40px;
+            width: 100%;
+
+            @include font(
+                var(--SizeText__TimeContent),
+                400,
+                "Gilroy",
+                var(--LineHeight__TimeContent)
+            );
+            color: var(--Color__DisabledTime);
+
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        &:hover {
+            background: rgba(238, 238, 238, 0.4);
+        }
+    }
+}
