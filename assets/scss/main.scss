@@ -116,13 +116,19 @@ $paddingSidesModile: 14px;
 .main {
     width: 100%;
     height: 100%;
+
+    &Wrapper{
+        @include displayFlex(center, center, column);
+    }
 }
 
 .personalMessage {
     &List {
         width: 100%;
 
-        @include displayFlex(flex-start, center, column);
+        @include displayFlex(flex-start, center, column, flow-root);
+
+        overflow: overlay;
     }
 
     &Item {
@@ -143,6 +149,10 @@ $paddingSidesModile: 14px;
             & .personalMessageItem--TitleContent {
                 color: var(--Color__ActiveText);
             }
+
+            & .personalMessageItem--Avatar::before {
+                content: none;
+            }
         }
 
         &--Content {
@@ -159,12 +169,29 @@ $paddingSidesModile: 14px;
             width: 100%;
             height: 100%;
 
+            position: relative;
+
             & img {
                 max-width: 36px;
                 max-height: 36px;
 
                 width: 100%;
                 height: 100%;
+
+                border-radius: 50%;
+            }
+
+            &::before {
+                content: "";
+                width: 7px;
+                height: 7px;
+
+                background: var(--Color__OnlineUserCircle);
+                border: 1px solid #ffffff;
+
+                position: absolute;
+                bottom: 3px;
+                right: 1px;
 
                 border-radius: 50%;
             }
@@ -230,7 +257,22 @@ $paddingSidesModile: 14px;
         }
 
         &:hover {
-            background: rgba(238, 238, 238, 0.4);
+            background: rgba(238, 238, 238, 0.5);
         }
     }
+}
+
+.titleMainGroupSelected{
+    @include displayFlex(center, flex-start);
+    gap: 12px;
+
+    &--img{
+        max-width: 42px;
+        max-height: 42px;
+
+        width: 100%;
+        height: 100%;   
+
+    }
+    
 }
