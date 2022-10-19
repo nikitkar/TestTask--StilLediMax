@@ -102,7 +102,7 @@
                 </ul>
             </div>
         </aside>
-        <main class="main" id="main">
+        <main class="main hide" id="main">
             <div class="mainWrapper">
                 <div class="titleMainGroupSelected">
                     <img
@@ -112,7 +112,10 @@
                     />
                     <h3 class="titleMainGroupSelected--Title">Group 2</h3>
 
-                    <button class="titleMainGroupSelected--GoBackButton" id="goToBackButtonChatList">
+                    <button
+                        class="titleMainGroupSelected--GoBackButton"
+                        id="goToBackButtonChatList"
+                    >
                         <svg
                             width="24"
                             height="24"
@@ -132,7 +135,7 @@
                 </div>
 
                 <div class="chat" id="chat">
-                    <div class="departureDate">
+                    <!-- <div class="departureDate">
                         <hr class="departureDate--Hr" />
                         <time class="departureDate--Time">31/10/2022</time>
                         <hr class="departureDate--Hr" />
@@ -147,6 +150,7 @@
                         </div>
 
                         <div class="userMessage--ContentBlock">
+                            <p class="userMessage--Name">Имя</p>
                             <p class="userMessage--ContentMessage">
                                 Привет! Ты видела мой рюкзак где-нибудь в офисе?
                             </p>
@@ -161,10 +165,10 @@
                             </p>
                             <time class="yourMessage--Time">11:42</time>
                         </div>
-                    </div>
+                    </div>  -->
                 </div>
 
-                <div class="enterMessageWrapper" id="enterMessageWrapper">
+                <form class="enterMessageWrapper" id="enterMessageWrapper">
                     <textarea
                         class="enterMessage--Input"
                         id="enterMessage--Input"
@@ -197,17 +201,12 @@
                             />
                         </svg>
                     </button>
-                </div>
+                </form>
             </div>
         </main>
-        
-        <div class="slick">
-            <div>
-                <h1></h1>title
 
-            </div>
-        </div>
-
-        <script src="./assets/scripts/js/main.js"></script>
+        <script src="/socket.io/socket.io.js"></script>
+        <script defer src="./assets/scripts/js/script.js"></script>
+        <script defer src="./assets/scripts/js/pageLogic.js"></script>
     </body>
 </html>
