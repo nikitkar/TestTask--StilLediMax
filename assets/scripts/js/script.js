@@ -22,6 +22,8 @@ const NameUserList = [
 const nameUser =
     NameUserList[Math.floor(Math.random() * (NameUserList.length - 1))];
 
+
+
 socket.emit("new-user", nameUser);
 
 function checkMinutes(minutes) {

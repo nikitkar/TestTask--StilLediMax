@@ -4,6 +4,8 @@ const express = require("express");
 const socket = require("socket.io");
 const app = express();
 
+const cookieParser = require('cookie-parser');
+
 const host = process.env.HOSTNAME;
 const port = process.env.PORT;
 
@@ -13,11 +15,13 @@ const server = app.listen(port, host, () => {
 
 const io = socket(server);
 
+app.use(express.static(__dirname));
+app.use(cookieParser('secret key'))
+
 //----------------------------------
 //-------------route----------------
 //----------------------------------
 
-app.use(express.static(__dirname));
 
 app.get("/", (req, res) => {
     res.sendFile(`${__dirname}/index.html`);
@@ -28,7 +32,7 @@ app.all("*", (req, res) => {
 });
 
 //----------------------------------
-//-------------scripts----------------
+//-------------scripts--------------
 //----------------------------------
 
 const users = {};
